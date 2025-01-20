@@ -1,6 +1,6 @@
 terraform {
   backend "local" {
-    path = "/Users/kunalverma/Desktop/terraform-course/02_state/state-file/terraform.tfstate"
+    path = "C:/Users/Mark/terraform-crash-course-2024/02_state/terraform.tfstate"
   }
   required_providers {
     local = {
@@ -9,3 +9,18 @@ terraform {
     }
   }
 }
+
+# Example of a remote backend using s3 bucket
+# terraform {
+#   backend "s3" {
+#     bucket = "mybucket"
+#     key    = "path/to/my/key"
+#     regions = "us-east-1"
+#   }
+#   required_providers {
+#     local = {
+#       source = "hashicorp/local"
+#       version = "2.5.1"
+#     }
+#   }
+# }
